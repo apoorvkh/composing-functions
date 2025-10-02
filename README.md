@@ -35,51 +35,58 @@ Beyond this, we implement our [experiments](./src/composing_functions/experiment
 
 To replicate the experiments and plots (output to `artifacts/`) in our paper, one can run:
 
+- Generate datasets for every task
+
 ```bash
-# Generate datasets for every task
 python configs/generate_data.py
 python plotting/tasks_table.py  # Tables 1-2
 ```
 
+- Evaluate all models on a few tasks
+
 ```bash
-# Evaluate all models on a few tasks
 python configs/evaluation_by_model.py
 python plotting/compositionality_gap_by_model.py  # Fig. 2
 python plotting/compositionality_gap_by_size.py  # App. C
 ```
 
+- Evaluate Llama 3 (3B) on all tasks
+
 ```bash
-# Evaluate Llama 3 (3B) on all tasks
 python configs/llama_3_3b/evaluation.py
 python plotting/compositionality_gap.py  # Fig. 1
 ```
 
+- Logit lens analyses on all tasks
+
 ```bash
-# Logit lens analyses on all tasks
 python configs/llama_3_3b/lens.py
 python plotting/logit_lens_overall.py  # Fig. 3(a-b)
 python plotting/logit_lens_per_task.py  # Fig. 3(c-f), App. D-E
 python plotting/intermediate_var_distribution.py  # Fig. 4(b)
 ```
 
+- Correlation between task linearity and intermediate variables
+
 ```bash
-# Correlation between task linearity and intermediate variables
 python configs/llama_3_3b/linear_task_embedding.py
 python configs/llama_3_3b/lens.py
 python plotting/task_logit_lens_corr.py  # Fig. 4(a)
 python plotting/hop_logit_lens_corr.py  # App. H
 ```
 
+- Token identity patchscope analyses
+
 ```bash
-# Token identity patchscope analyses
 python configs/llama_3_3b/lens_token_identity.py
 python plotting/token_identity_per_task.py  # App. F, Fig. 10-11
 python configs/llama_3_3b/linear_task_embedding.py
 python plotting/task_token_identity_correlation.py  # App. F, Fig. 12
 ```
 
+- Causality of intermediate variable representations
+
 ```bash
-# Causality of intermediate variable representations
 python configs/llama_3_3b/patching_across_tasks_comp.py
 python configs/llama_3_3b/patching_across_tasks_direct.py
 python plotting/patching_across_tasks.py  # App. G
