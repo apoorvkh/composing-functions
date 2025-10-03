@@ -1,6 +1,6 @@
 # How Do Language Models Compose Functions?
 
-[[Paper]]()
+[[Paper]](https://arxiv.org/abs/2510.01685)
 
 **Apoorv Khandelwal & Ellie Pavlick**
 
@@ -95,9 +95,13 @@ python plotting/patching_across_tasks.py  # App. G
 ## Citation
 
 ```bibtex
-@misc{khandelwal2025:composing,
-  title={How Do Language Models Compose Functions?},
-  author={Apoorv Khandelwal and Ellie Pavlick},
-  year={2025}
+@misc{khandelwal2025:compose,
+      title={How Do Language Models Compose Functions?}, 
+      author={Apoorv Khandelwal and Ellie Pavlick},
+      year={2025},
+      eprint={2510.01685},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2510.01685}, 
 }
 ```
